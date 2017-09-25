@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp1.6</TargetFramework>
+    <AssemblyName>v1test</AssemblyName>
+    <OutputType>Exe</OutputType>
+    <PackageId>v1test</PackageId>
+    <RuntimeFrameworkVersion>1.1.2</RuntimeFrameworkVersion>
+    <PackageTargetFallback>$(PackageTargetFallback);dotnet5.6;portable-net45+win8</PackageTargetFallback>
+    <Description>Wlniao 测试工具项目</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Update="Dockerfile">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Wlniao.XCore" Version="1.9.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\PublishProfiles\" />
+  </ItemGroup>
+
+</Project>
